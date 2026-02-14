@@ -9,7 +9,7 @@
     <body>
         <div class="pageContainer-Div">
 
-            <h1>Select your <br><span class="modeSelectonTitle-Span">Mode</span></h1>
+            <h1>Select your mode</h1>
             <p class="miniDescription">Which mode represents you?</p>
 
             <div class="options-Div">
@@ -32,17 +32,39 @@
                 </label>
             </div>
 
-            <form>
+            <form id="modeSelectionForm">
                 <div class="partnerEmail-Div">
                     <input class="email-Input" type="email" placeholder="Enter partner's email">
                 </div>
-
                 <button class="submit-Button">Enter</button>
-
             </form>
-            
+        </div> 
 
-        </div>
+        <script>
+            const form = document.getElementById('modeSelectionForm');
+            const emailInput = document.getElementById('partnerEmail');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const selection = document.querySelector('input[name="singleOrTaken"]:checked');
+                if(!selection){
+                    alert("Please select a mode first!");
+                    return;
+                }
+
+                if(selection.value === 'self'){
+                    window.location.href = 'single-page.html';
+                }
+                else if(selection.value === 'taken'){
+                    if(emailInput.value.trim() === ""){
+                        alert("Please eneter your partner's email!");
+                    }else{
+                        window.location.href='partner-page.html'
+                    }
+                }
+            }); 
+        </script>
 
 
 
