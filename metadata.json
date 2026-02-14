@@ -1,0 +1,5 @@
+{
+  "name": "LoveCare Emotional Health Check",
+  "description": "A beautiful, plain JavaScript tool to track emotional health over a 7-day period using a calendar dashboard and Gemini AI insights.",
+  "requestFramePermissions": []
+}
