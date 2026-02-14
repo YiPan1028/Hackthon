@@ -1,0 +1,171 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.pageContainer-Div{
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+    font-weight: 800;
+}
+
+.modeSelectionTitle-Span{
+    color: rgb(68, 68, 68);
+}
+
+.miniDescription{
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.options-Div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.singleOption-Label, .takenOption-Label{
+    background: #0a0a0a;
+    border: 2px solid #1a1a1a;
+    border-radius: 20px;
+    padding: 30px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.option-Radio{
+    display: none;
+}
+
+.emoji-Span{
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.optionLabel-H3{
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.singleOption-Label:has(.option-Radio:checked){
+    border-color: rgb(88, 81, 219);
+    background-color: rgba(88, 81, 219, 0.1);
+    box-shadow: 0 0 20px rgba(88, 81, 219, 0.15);
+}
+
+.takenOption-Label:has(.option-Radio:checked){
+    border-color: #E0245E;
+    background-color: rgba(224, 36, 94, 0.1);
+    box-shadow: 0 0 20px rgba(224, 36, 94, 0.15);
+}
+
+/* Email PopUp Logic */
+
+.partnerEmail-Div{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin-bottom: 0;
+}
+
+.pageContainer-Div:has(.option-Radio[value="taken"]:checked) .partnerEmail-Div{
+    max-height: 100px;
+    opacity: 1;
+    margin-bottom: 30px; 
+}
+
+.email-Input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    color: white;
+    outline: none;
+}
+
+.email-Input:focus{
+    border-color: #E0245E;
+}
+
+.submit-Button{
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pageContainer-Div:has(.option-Radio[value="self"]:checked) .submit-Button{
+    color: white;
+    background-color: #5851DB;
+}
+
+.pageContainer-Div:has(.option-Radio[value="taken"]:checked) .submit-Button{
+    color: white; 
+    background-color: #E0245E;
+}
+
+/* .partnerEmail-Div{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin-bottom: 0;
+}
+
+.pageContainer-Div:has(input[value="part"]){
+    max-height: 100px;
+    opacity: 1;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+.singleOption-Label{
+    display: block;
+    cursor: pointer;
+    border: 2px solid rgb(34, 34, 34);
+    transition: all 0.3s ease;
+}
+
+.option-Radio{
+    display: none;
+}
+
+.singleOption-Label:has(input:checked){
+    border-color: rgb(88, 81, 219);
+    background-color: rgb(26, 26, 26);
+}
+
+
+.takenOption-Label{
+
+}
+
+.takenOption-Div::radio:checked{
+    
+} */
