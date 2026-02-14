@@ -1,0 +1,9 @@
+input{
+    outline: none;
+    display: block;
+    margin: 10px 0px;
+}
+
+input:focus::placeholder{
+    color: transparent;
+}
